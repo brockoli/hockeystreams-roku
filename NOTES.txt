@@ -1,0 +1,13 @@
+You simply need to send a POST request to https://www5.hockeystreams.com/verify/login with the username/password.
+
+ If it's easier I can make a secured RSS file you can search with a key and it gives you back a response.
+
+URLs you need:
+ http://www4.hockeystreams.com/rss/roku_dates.php (dates where archives are available)
+http://www4.hockeystreams.com/rss/roku_demand.php?date=mm/dd/yyyy (archives by date)
+ http://www4.hockeystreams.com/rss/roku_demand.php?team=torontomapleleafs (archives by team}
+http://www4.hockeystreams.com/rss/roku_live.php (live games)
+
+ The URL you are fetching is in http://server/publishing_point format. You need to add /manifest(format=m3u8-aapl) to the end of each URL
+
+ http://www4.hockeystreams.com/include/exception.inc.php for ip exceptions.
