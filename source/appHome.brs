@@ -43,7 +43,7 @@ Function showHomeScreen(screen) As Integer
             print "showHomeScreen | msg = " +  msg.GetMessage() + " | index = " + itostr(msg.GetIndex())
 
             if msg.isListItemSelected() then
-                doRegistration() 'file: regScreen.brs
+                'doRegistration() 'file: regScreen.brs
             else if msg.isScreenClosed() then
                 return -1
             end if

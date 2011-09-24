@@ -11,14 +11,14 @@ Sub Main()
     initTheme() 'file: appMain.brs
 
     'prepare the screen for display and get ready to begin
-    screen=preShowHomeScreen("", "")
+    screen=preShowWelcomeScreen("", "")
     if screen=invalid then
         print "unexpected error in preShowHomeScreen"
         return
     end if
 
 	    'set to go, time to get started
-    showHomeScreen(screen) 'file: appHome.brs
+    showWelcomeScreen(screen) 'file: welcomeScreen.brs
 
 End Sub
 

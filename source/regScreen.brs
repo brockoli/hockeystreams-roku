@@ -33,13 +33,13 @@ Function doRegistration() As Integer
 	  sec.Write("password", password)
 	  sec.Flush()
 	  
-	' login
-	xfer = CreateObject("roURLTransfer")
-	' setup the transfer for SSL
-	xfer.SetCertificatesFile("common:/certs/ca-bundle.crt")
-	xfer.InitClientCertificates()
-	xfer.SetURL(m.UrlBase + m.UrlLogin + "?username=" + xfer.Escape(username) + "&password=" + xfer.Escape(password))
-	xfer.
+	  ' login
+	  xfer = CreateObject("roURLTransfer")
+	  ' setup the transfer for SSL
+	  xfer.SetCertificatesFile("common:/certs/ca-bundle.crt")
+	  xfer.InitClientCertificates()
+	  xfer.SetURL(m.UrlBase + m.UrlLogin + "?username=" + xfer.Escape(username) + "&password=" + xfer.Escape(password))
+	end if
 	
 End Function
 
