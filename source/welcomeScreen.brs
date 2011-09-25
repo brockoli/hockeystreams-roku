@@ -50,13 +50,33 @@ Function showWelcomeScreen(screen) As Void
 			  if msg.GetIndex() = 1
 			    'Stub to run login screen
 				print "showWelcomeScreen: Start"
+				'prepare the screen for display and get ready to begin
+				loginScreen=preShowKeyboardScreen("Setup", "Username") 'file: loginScreens.brs
+				if loginScreen=invalid then
+					print "unexpected error in preShowKeyboardScreen"
+					return
+				end if
+				'set to go, time to get started
+				username = showKeyboardScreen(loginScreen, "Enter the username for your HockeyStreams.com account:") 'file: loginScreens.brs
+				print username
+				if username <> ""
+				  ' only prompt for password if a username was entered
+				  loginScreen = preShowKeyboardScreen("Setup", "Password") 'file: loginScreens.brs
+				  if loginScreen = invalid then
+					print "unexpected error in preShowKeyboardScreen"
+					return
+				  end if
+				  password = showKeyboardScreen(loginScreen, "Enter the password for your HockeyStreams.com account:", true)
+				  print "username = " + username + " password = " + password
+				end if
+
 			  else if msg.GetIndex() = 2
 			    'Stub to run preview stream
 				print "showWelcomeScreen: Preview"
 			  else if msg.GetIndex() = 3
 			    'Stub to exit channel
 				print "showWelcomeScreen: Cancel"
-				exit while
+				screen.Close()
 			  end if
             else if msg.isScreenClosed() then
 			  exit while
