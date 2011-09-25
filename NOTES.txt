@@ -11,3 +11,5 @@ http://www4.hockeystreams.com/rss/roku_live.php (live games)
  The URL you are fetching is in http://server/publishing_point format. You need to add /manifest(format=m3u8-aapl) to the end of each URL
 
  http://www4.hockeystreams.com/include/exception.inc.php for ip exceptions.
+
+http://cdn-na-central2.distrubutionaire.com/PREMIUM_HSTV_14.isml/manifest?token=GElFiYqXyFVaJOI2tUO6vap7W/Rl7waXFVIIerMHZTHo/DXe3zaDvFAS6uiwp5EIB25XkVMhO4PfmEtgGy2peA==

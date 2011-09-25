@@ -68,6 +68,29 @@ Function showWelcomeScreen(screen) As Void
 				  end if
 				  password = showKeyboardScreen(loginScreen, "Enter the password for your HockeyStreams.com account:", true)
 				  print "username = " + username + " password = " + password
+				  
+				  ' *** Testing authentication
+				  urlPort=CreateObject("roMessagePort")
+
+				  xfer = CreateObject("roURLTransfer")
+				  xfer.SetPort(urlPort)
+				  xfer.SetCertificatesFile("common:/certs/ca-bundle.crt")
+				  xfer.AddHeader("X-Roku-Reserved-Dev-Id", "")
+				  xfer.InitClientCertificates()
+				  xfer.SetUrl("https://www5.hockeystreams.com/verify/login")
+				  xfer.AsyncPostFromString("username=" + username + "&password=" + password)
+				  
+				  while true
+				    msg = wait(0, xfer.GetPort())
+					
+					if type(msg) = "roUrlEvent" then
+					  headers = msg.GetResponseHeadersArray()
+					  for each header in headers
+					    print header
+					  next
+					end if
+				  end while
+				  				  
 				end if
 
 			  else if msg.GetIndex() = 2
