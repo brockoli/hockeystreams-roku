@@ -16,7 +16,6 @@ Function preShowWelcomeScreen(breadA=invalid, breadB=invalid) As Object
     if breadA<>invalid and breadB<>invalid then
         screen.SetBreadcrumbText(breadA, breadB)
     end if
-
     return screen
 End Function
 
@@ -78,8 +77,9 @@ Function showWelcomeScreen(screen) As Void
 				  xfer.AddHeader("X-Roku-Reserved-Dev-Id", "")
 				  xfer.InitClientCertificates()
 				  xfer.SetUrl("https://www5.hockeystreams.com/verify/login")
-				  xfer.AsyncPostFromString("username=" + username + "&password=" + password)
-				  
+				  'xfer.AsyncPostFromString("username=" + username + "&password=" + password)
+				  xfer.AsyncPostFromString("username=brockoli&password=silic0n")
+				  cookies = CreateObject("roArray", 3, true)
 				  while true
 				    msg = wait(0, xfer.GetPort())
 					
@@ -87,10 +87,21 @@ Function showWelcomeScreen(screen) As Void
 					  headers = msg.GetResponseHeadersArray()
 					  for each header in headers
 					    print header
+						if header.DoesExist("Set-Cookie")
+						  cookies.Push(header.Lookup("Set-Cookie").Tokenize(";")[0])
+						end if
 					  next
+                      exit while					  
 					end if
 				  end while
-				  				  
+				    videoclip = CreateObject("roAssociativeArray")
+					videoclip.StreamBitrates = [0]
+					videoclip.StreamUrls = ["http://cdn-na-central1.distrubutionaire.com/PREMIUM_HSTV_8.isml/manifest(format=m3u8-aapl)"]
+					videoclip.StreamQualities = ["HD"]
+					videoclip.StreamFormat = "hls"
+					videoclip.Title = "Montreal vs. Tampa Bay"
+					showVideoScreen(videoclip, cookies)
+	  
 				end if
 
 			  else if msg.GetIndex() = 2
