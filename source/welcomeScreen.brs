@@ -96,10 +96,10 @@ Function showWelcomeScreen(screen) As Void
 				  end while
 				    videoclip = CreateObject("roAssociativeArray")
 					videoclip.StreamBitrates = [0]
-					videoclip.StreamUrls = ["http://cdn-na-central1.distrubutionaire.com/PREMIUM_HSTV_8.isml/manifest(format=m3u8-aapl)"]
+					videoclip.StreamUrls = ["http://69.175.126.132/hls-live/pp/PREMIUM_HSTV_13/liveevent/livestream1.m3u8"]
 					videoclip.StreamQualities = ["HD"]
 					videoclip.StreamFormat = "hls"
-					videoclip.Title = "Montreal vs. Tampa Bay"
+					videoclip.Title = "Hockeystreams.com live"
 					showVideoScreen(videoclip, cookies)
 	  
 				end if
