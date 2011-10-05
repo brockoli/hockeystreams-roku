@@ -1,11 +1,19 @@
-' ********************************************************************
-' **  hockeystreams.com app 
-' **  September 2011
-' **  developers: brockoli
-' **  artists: dmathieu
-' ********************************************************************
+'**********************************************************
+'**  Video Player Example Application - Video Playback 
+'**  November 2009
+'**  Copyright (c) 2009 Roku Inc. All Rights Reserved.
+'**********************************************************
 
-Function showVideoScreen(episode As Object, headers As Object)
+'***********************************************************
+'** Create and show the video screen.  The video screen is
+'** a special full screen video playback component.  It 
+'** handles most of the keypresses automatically and our
+'** job is primarily to make sure it has the correct data 
+'** at startup. We will receive event back on progress and
+'** error conditions so it's important to monitor these to
+'** understand what's going on, especially in the case of errors
+'***********************************************************  
+Function showVideoScreen(episode As Object)
 
     if type(episode) <> "roAssociativeArray" then
         print "invalid data passed to showVideoScreen"
@@ -18,14 +26,17 @@ Function showVideoScreen(episode As Object, headers As Object)
 
     screen.Show()
     screen.SetPositionNotificationPeriod(30)
-	'screen.AddHeader("X-Roku-Reserved-Dev-Id", "")
-	if headers <> invalid
-	  for each header in headers
-	    print header
-	    screen.AddHeader("Cookie", header)
-      next
-	end if
-    screen.SetContent(episode)
+
+    
+                    videoclip = CreateObject("roAssociativeArray")
+                    videoclip.StreamBitrates = [0]
+                    videoclip.StreamUrls = ["http://69.175.126.132/vod/HSTV14_10022011/PREMIUM_HSTV_14.m3u8"]
+                    videoclip.StreamQualities = ["HD"]
+                    videoclip.StreamFormat = "hls"
+                    videoclip.Title = "Chicago vs. Washington"
+                    'videoclip.minBandwidth = 20
+
+    screen.SetContent(videoclip)
     screen.Show()
 
     'Uncomment his line to dump the contents of the episode to be played
@@ -48,6 +59,8 @@ Function showVideoScreen(episode As Object, headers As Object)
             elseif msg.isPlaybackPosition() then
                 nowpos = msg.GetIndex()
                 'RegWrite(episode.ContentId, nowpos.toStr())
+            elseif msg.isStreamStarted()
+                print msg.GetInfo()
             else
                 print "Unexpected event type: "; msg.GetType()
             end if
@@ -57,3 +70,4 @@ Function showVideoScreen(episode As Object, headers As Object)
     end while
 
 End Function
+

@@ -1,26 +1,28 @@
-' ********************************************************************
-' **  hockeystreams.com app 
-' **  September 2011
-' **  developers: brockoli
-' **  artists: dmathieu
-' ********************************************************************
+'********************************************************************
+'**  Video Player Example Application - Main
+'**  November 2009
+'**  Copyright (c) 2009 Roku Inc. All Rights Reserved.
+'********************************************************************
 
 Sub Main()
 
     'initialize theme attributes like titles, logos and overhang color
-    initTheme() 'file: appMain.brs
+    initTheme()
 
     'prepare the screen for display and get ready to begin
-    screen=preShowWelcomeScreen("", "")
+    'screen=preShowHomeScreen("", "")
+    screen = preShowPosterScreen("", "")
     if screen=invalid then
         print "unexpected error in preShowHomeScreen"
         return
     end if
 
-	    'set to go, time to get started
-    showWelcomeScreen(screen) 'file: welcomeScreen.brs
+    'set to go, time to get started
+    'showHomeScreen(screen)
+    showPosterScreen(screen)
 
 End Sub
+
 
 '*************************************************************
 '** Set the configurable theme attributes for the application
