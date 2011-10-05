@@ -77,8 +77,7 @@ Function showWelcomeScreen(screen) As Void
 				  xfer.AddHeader("X-Roku-Reserved-Dev-Id", "")
 				  xfer.InitClientCertificates()
 				  xfer.SetUrl("https://www5.hockeystreams.com/verify/login")
-				  'xfer.AsyncPostFromString("username=" + username + "&password=" + password)
-				  xfer.AsyncPostFromString("username=brockoli&password=silic0n")
+				  xfer.AsyncPostFromString("username=" + username + "&password=" + password)
 				  cookies = CreateObject("roArray", 3, true)
 				  while true
 				    msg = wait(0, xfer.GetPort())
@@ -96,7 +95,7 @@ Function showWelcomeScreen(screen) As Void
 				  end while
 				    videoclip = CreateObject("roAssociativeArray")
 					videoclip.StreamBitrates = [0]
-					videoclip.StreamUrls = ["http://69.175.126.132/hls-live/pp/PREMIUM_HSTV_13/liveevent/livestream1.m3u8"]
+					videoclip.StreamUrls = ["http://69.175.126.132/PREMIUM_HSTV_14.m3u8"]
 					videoclip.StreamQualities = ["HD"]
 					videoclip.StreamFormat = "hls"
 					videoclip.Title = "Hockeystreams.com live"
