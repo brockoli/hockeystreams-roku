@@ -36,7 +36,7 @@ Function showVideoScreen(episode As Object)
                     videoclip.Title = "Chicago vs. Washington"
                     'videoclip.minBandwidth = 20
 
-    screen.SetContent(videoclip)
+    screen.SetContent(episode)
     screen.Show()
 
     'Uncomment his line to dump the contents of the episode to be played
