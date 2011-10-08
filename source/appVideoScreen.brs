@@ -30,12 +30,16 @@ Function showVideoScreen(episode As Object)
     
                     videoclip = CreateObject("roAssociativeArray")
                     videoclip.StreamBitrates = [0]
-                    videoclip.StreamUrls = ["http://69.175.126.132/vod/HSTV14_10022011/PREMIUM_HSTV_14.m3u8"]
+                    videoclip.StreamUrls = ["http://85.17.232.200/PREMIUM_HSTV_13.m3u8"]
                     videoclip.StreamQualities = ["HD"]
                     videoclip.StreamFormat = "hls"
                     videoclip.Title = "Chicago vs. Washington"
                     'videoclip.minBandwidth = 20
-
+    print episode.StreamUrls[0]
+    print episode.StreamBitrates[0]
+    print episode.StreamQualities[0]
+    print episode.StreamFormat
+    
     screen.SetContent(episode)
     screen.Show()
 
