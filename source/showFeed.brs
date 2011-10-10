@@ -51,6 +51,7 @@ Function init_show_feed_item() As Object
     o = CreateObject("roAssociativeArray")
 
     o.Title            = ""
+    o.SubCat           = 2
     o.ContentQuality   = "HD"
     o.Description      = ""
     o.StreamFormat     = "hls"

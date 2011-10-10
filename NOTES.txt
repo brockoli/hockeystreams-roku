@@ -5,7 +5,7 @@ You simply need to send a POST request to https://www5.hockeystreams.com/verify/
 URLs you need:
  http://www4.hockeystreams.com/rss/roku_dates.php (dates where archives are available)
 http://www4.hockeystreams.com/rss/roku_demand.php?date=mm/dd/yyyy (archives by date)
- http://www4.hockeystreams.com/rss/roku_demand.php?team=torontomapleleafs (archives by team}
+ http://www4.hockeystreams.com/rss/roku_demand.php?team=toronto_maple_leafs (archives by team}
 http://www4.hockeystreams.com/rss/roku_live.php (live games)
 
  The URL you are fetching is in http://server/publishing_point format. You need to add /manifest(format=m3u8-aapl) to the end of each URL
