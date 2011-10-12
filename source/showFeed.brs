@@ -55,11 +55,12 @@ Function init_show_feed_item() As Object
     o.ContentQuality   = "HD"
     o.Description      = ""
     o.StreamFormat     = "hls"
-    o.StreamQualities  = CreateObject("roArray", 5, true)
-    o.StreamQualities[0] = "HD" 
-    o.StreamBitrates   = CreateObject("roArray", 5, true)
-    o.StreamBitrates[0] = 0
-    o.StreamUrls       = CreateObject("roArray", 5, true)
+    'o.StreamQualities  = CreateObject("roArray", 5, true)
+    o.StreamQualities  = ["HD"] 
+    'o.StreamBitrates   = CreateObject("roArray", 5, true)
+    o.StreamBitrates   = [0]
+    o.StreamUrls       = CreateObject("roArray", 1, true)
+    o.minBandwidth = 20   
 
     return o
 End Function
