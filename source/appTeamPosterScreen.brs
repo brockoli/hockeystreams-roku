@@ -84,9 +84,17 @@ End Function
 '** displayed should be refreshed to corrrespond to the highlighted
 '** item.  This function returns the list of shows for that category
 '********************************************************************
+'Function getTeams() As Object
+
+'    teamList = LoadTeamXml()
+'    return teamList
+    
+'End Function
+
 Function getTeams() As Object
 
-    teamList = LoadTeamXml()
+    conn = InitTeamListConnection()
+    teamList = conn.LoadTeamXml(conn)
     return teamList
-    
+
 End Function

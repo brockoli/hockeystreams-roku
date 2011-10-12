@@ -1,32 +1,32 @@
 <teams>
-	<team name="anaheim_ducks" logo="pkg:/images/anaheim_ducks.png"></team>
-	<team name="boston_bruins" logo="pkg:/images/boston_bruins.png"></team>
-	<team name="buffalo_sabres" logo="pkg:/images/buffalo_sabres.png"></team>
-	<team name="calgary_flames" logo="pkg:/images/calgary_flames.png"></team>
-	<team name="carolina_hurricanes" logo="pkg:/images/carolina_hurricanes.png"></team>
-	<team name="chicago_blackhawks" logo="pkg:/images/chicago_blackhawks.png"></team>
-	<team name="colorado_avalanche" logo="pkg:/images/colorado_avalanche.png"></team>
-	<team name="columbus_blue_jackets" logo="pkg:/images/columbus_blue_jackets.png"></team>
-	<team name="dallas_stars" logo="pkg:/images/dallas_stars.png"></team>
-	<team name="detroit_red_wings" logo="pkg:/images/detroit_red_wings.png"></team>
-	<team name="edmonton_oilers" logo="pkg:/images/edmonton_oilers.png"></team>
-	<team name="florida_panthers" logo="pkg:/images/florida_panthers.png"></team>
-	<team name="los_angeles_kings" logo="pkg:/images/los_angeles_kings.png"></team>
-	<team name="minnesota_wild" logo="pkg:/images/minnesota_wild.png"></team>
-	<team name="montreal_canadiens" logo="pkg:/images/montreal_canadiens.png"></team>
-	<team name="nashville_predators" logo="pkg:/images/nashville_predators.png"></team>
-	<team name="new_jersey_devils" logo="pkg:/images/new_jersey_devils.png"></team>
-	<team name="new_york_islanders" logo="pkg:/images/new_york_islanders.png"></team>
-	<team name="new_york_rangers" logo="pkg:/images/new_york_rangers.png"></team>
-	<team name="ottawa_senators" logo="pkg:/images/ottawa_senators.png"></team>
-	<team name="philadelphia_flyers" logo="pkg:/images/philadelphia_flyers.png"></team>
-	<team name="phoenix_coyotes" logo="pkg:/images/phoenix_coyotes.png"></team>
-	<team name="pittsburgh_penguins" logo="pkg:/images/pittsburgh_penguins.png"></team>
-	<team name="san_jose_sharks" logo="pkg:/images/san_jose_sharks.png"></team>
-	<team name="st_louis_blues" logo="pkg:/images/st_louis_blues.png"></team>
-	<team name="tampa_bay_lightning" logo="pkg:/images/tampa_bay_lightning.png"></team>
-	<team name="toronto_maple_leafs" logo="pkg:/images/toronto_maple_leafs.png"></team>
-	<team name="vancouver_canucks" logo="pkg:/images/vancouver_canucks.png"></team>
-	<team name="washington_capitals" logo="pkg:/images/washington_capitals.png"></team>
-	<team name="winnipeg_jets" logo="pkg:/images/winnipeg_jets.png"></team>
+	<team name="Anaheim Ducks" logo="http://brockoli.dyndns.org/moe/artwork/Anaheim.jpg"></team>
+	<team name="Boston Bruins" logo="http://brockoli.dyndns.org/moe/artwork/Boston.jpg"></team>
+	<team name="Buffalo Sabres" logo="http://brockoli.dyndns.org/moe/artwork/Buffalo.jpg"></team>
+	<team name="Calgary Flames" logo="http://brockoli.dyndns.org/moe/artwork/Calgary.jpg"></team>
+	<team name="Carolina Hurricanes" logo="http://brockoli.dyndns.org/moe/artwork/Carolina.jpg"></team>
+	<team name="Chicago Blackhawks" logo="http://brockoli.dyndns.org/moe/artwork/Chicago.jpg"></team>
+	<team name="Colorado Avalanche" logo="http://brockoli.dyndns.org/moe/artwork/Colorado.jpg"></team>
+	<team name="Columbus Blue Jackets" logo="http://brockoli.dyndns.org/moe/artwork/Columbus.jpg"></team>
+	<team name="Dallas Stars" logo="http://brockoli.dyndns.org/moe/artwork/Dallas.jpg"></team>
+	<team name="Detroit Red Wings" logo="http://brockoli.dyndns.org/moe/artwork/Detroit.jpg"></team>
+	<team name="Edmonton Oilers" logo="http://brockoli.dyndns.org/moe/artwork/Edmonton.jpg"></team>
+	<team name="Florida Panthers" logo="http://brockoli.dyndns.org/moe/artwork/Florida.jpg"></team>
+	<team name="Los Angeles Kings" logo="http://brockoli.dyndns.org/moe/artwork/LA.jpg"></team>
+	<team name="Minnesota Wild" logo="http://brockoli.dyndns.org/moe/artwork/Minnesota.jpg"></team>
+	<team name="Montreal Canadiens" logo="http://brockoli.dyndns.org/moe/artwork/Montreal.jpg"></team>
+	<team name="Nashville Predators" logo="http://brockoli.dyndns.org/moe/artwork/Nashville.jpg"></team>
+	<team name="New Jersey Devils" logo="http://brockoli.dyndns.org/moe/artwork/New_Jersey.jpg"></team>
+	<team name="New York Islanders" logo="http://brockoli.dyndns.org/moe/artwork/Islanders.jpg"></team>
+	<team name="New York Rangers" logo="http://brockoli.dyndns.org/moe/artwork/Rangers.jpg"></team>
+	<team name="Ottawa Senators" logo="http://brockoli.dyndns.org/moe/artwork/Ottawa.jpg"></team>
+	<team name="Philadelphia Flyers" logo="http://brockoli.dyndns.org/moe/artwork/Philadelphia.jpg"></team>
+	<team name="Phoenix Coyotes" logo="http://brockoli.dyndns.org/moe/artwork/Phoenix.jpg"></team>
+	<team name="Pittsburgh Penguins" logo="http://brockoli.dyndns.org/moe/artwork/Pitt.jpg"></team>
+	<team name="San Jose Sharks" logo="http://brockoli.dyndns.org/moe/artwork/San_Jose.jpg"></team>
+	<team name="St Louis Blues" logo="http://brockoli.dyndns.org/moe/artwork/St-Louis.jpg"></team>
+	<team name="Tampa Bay Lightning" logo="http://brockoli.dyndns.org/moe/artwork/Tampa_Bay.jpg"></team>
+	<team name="Toronto Maple Leafs" logo="http://brockoli.dyndns.org/moe/artwork/Toronto.jpg"></team>
+	<team name="Vancouver Canucks" logo="http://brockoli.dyndns.org/moe/artwork/Vancouver.jpg"></team>
+	<team name="Washington Capitals" logo="http://brockoli.dyndns.org/moe/artwork/Washington.jpg"></team>
+	<team name="Winnipeg Jets" logo="http://brockoli.dyndns.org/moe/artwork/Winnipeg.jpg"></team>
 </teams>
