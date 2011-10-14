@@ -8,7 +8,7 @@
 '** Perform any startup/initialization stuff prior to 
 '** initially showing the screen.  
 '******************************************************
-Function preShowTeamPosterScreen(breadA=invalid, breadB=invalid) As Object
+Function preShowTeamGamesScreen(breadA=invalid, breadB=invalid) As Object
 
     if validateParam(breadA, "roString", "preShowPosterScreen", true) = false return -1
     if validateParam(breadB, "roString", "preShowPosterScreen", true) = false return -1
@@ -31,14 +31,15 @@ End Function
 '** the screen. The screen will show retreiving while
 '** we fetch and parse the feeds for the game posters
 '******************************************************
-Function showTeamPosterScreen(screen As Object) As Integer
+Function showTeamGamesScreen(screen As Object, teamid As String) As Integer
 
-    if validateParam(screen, "roPosterScreen", "showPosterScreen") = false return -1
+    if validateParam(screen, "roPosterScreen", "showTeamGamesScreen") = false return -1
 
     m.curShow     = 0
     
-    teams = getTeams()
-    screen.SetContentList(teams)
+    shows = getGamesByTeam(teamid)
+    screen.SetListNames(getCategoryList())
+    screen.SetContentList(shows)
     screen.Show()
 
     while true
@@ -49,9 +50,11 @@ Function showTeamPosterScreen(screen As Object) As Integer
                 m.curShow = 0
                 screen.SetFocusedListItem(m.curShow)
                 if msg.GetIndex() = 0 then
-                  screen.SetContentList(getShowsForLive())
+                  shows = getShowsForLive()
+                  screen.SetContentList(shows)
                 else if msg.GetIndex() = 1 then
-                  screen.SetContentList(getVodCategories())
+                  shows = getVodCategories()
+                  screen.SetContentList(shows)
                 else if msg.GetIndex() = 2 then
                   screen.SetContentList(getShowsForLive())
                 end if
@@ -59,14 +62,8 @@ Function showTeamPosterScreen(screen As Object) As Integer
             else if msg.isListItemSelected() then
                 m.curShow = msg.GetIndex()
                 print "list item selected | current show = "; m.curShow
-                if teams[m.curShow].SubCat = 3 then
-                    print "preShowTeamGamesScreen"
-                    subScreen = preShowTeamGamesScreen("On-Demand by Team", teams[m.curShow].Title)
-                    if subScreen=invalid then
-                        print "unexpected error in preShowTeamGamesScreen"
-                        return -1
-                    end if
-                    showTeamGamesScreen(subScreen, teams[m.curShow].TeamId)
+                if shows[m.curShow].SubCat = 2 then
+                  ShowVideoScreen(shows[m.curShow])
                 end if
                 screen.SetFocusedListItem(m.curShow)
                 print "list item updated  | new show = "; m.curShow
@@ -75,12 +72,21 @@ Function showTeamPosterScreen(screen As Object) As Integer
             end if
         end If
     end while
+
+
 End Function
 
-Function getTeams() As Object
+'********************************************************************
+'** Return the list of shows corresponding the currently selected
+'** category in the filter banner.  As the user highlights a
+'** category on the top of the poster screen, the list of posters
+'** displayed should be refreshed to corrrespond to the highlighted
+'** item.  This function returns the list of shows for that category
+'********************************************************************
+Function getGamesByTeam(teamid As String) As Object
 
-    conn = InitTeamListConnection()
-    teamList = conn.LoadTeamXml(conn)
-    return teamList
+    conn = InitTeamByGameFeedConnection(teamid)
+    showList = conn.LoadTeamGamesFeed(conn)
+    return showList
 
 End Function

@@ -1,0 +1,32 @@
+<teams>
+	<team teamid="anaheim_ducks" name="Anaheim Ducks" logo="http://www5.hockeystreams.com/images/artwork/Anaheim.jpg"></team>
+	<team teamid="boston_bruins" name="Boston Bruins" logo="http://www5.hockeystreams.com/images/artwork/Boston.jpg"></team>
+	<team teamid="buffalo_sabres" name="Buffalo Sabres" logo="http://www5.hockeystreams.com/images/artwork/Buffalo.jpg"></team>
+	<team teamid="calgary flames" name="Calgary Flames" logo="http://www5.hockeystreams.com/images/artwork/Calgary.jpg"></team>
+	<team teamid="carolina_hurricanes" name="Carolina Hurricanes" logo="http://www5.hockeystreams.com/images/artwork/Carolina.jpg"></team>
+	<team teamid="chicago_blackhawks" name="Chicago Blackhawks" logo="http://www5.hockeystreams.com/images/artwork/Chicago.jpg"></team>
+	<team teamid="colorado avalanche" name="Colorado Avalanche" logo="http://www5.hockeystreams.com/images/artwork/Colorado.jpg"></team>
+	<team teamid="columbus_blue_jackets" name="Columbus Blue Jackets" logo="http://www5.hockeystreams.com/images/artwork/Columbus.jpg"></team>
+	<team teamid="dallas_stars" name="Dallas Stars" logo="http://www5.hockeystreams.com/images/artwork/Dallas.jpg"></team>
+	<team teamid="detroit_red_wings" name="Detroit Red Wings" logo="http://www5.hockeystreams.com/images/artwork/Detroit.jpg"></team>
+	<team teamid="edmonton_oilers" name="Edmonton Oilers" logo="http://www5.hockeystreams.com/images/artwork/Edmonton.jpg"></team>
+	<team teamid="florida_panthers" name="Florida Panthers" logo="http://www5.hockeystreams.com/images/artwork/Florida.jpg"></team>
+	<team teamid="los_angeles_kings" name="Los Angeles Kings" logo="http://www5.hockeystreams.com/images/artwork/LA.jpg"></team>
+	<team teamid="minnesota_wild" name="Minnesota Wild" logo="http://www5.hockeystreams.com/images/artwork/Minnesota.jpg"></team>
+	<team teamid="montreal_canadiens" name="Montreal Canadiens" logo="http://www5.hockeystreams.com/images/artwork/Montreal.jpg"></team>
+	<team teamid="nashville_predators" name="Nashville Predators" logo="http://www5.hockeystreams.com/images/artwork/Nashville.jpg"></team>
+	<team teamid="new_jersey_devils" name="New Jersey Devils" logo="http://www5.hockeystreams.com/images/artwork/New_Jersey.jpg"></team>
+	<team teamid="new_york_islanders" name="New York Islanders" logo="http://www5.hockeystreams.com/images/artwork/Islanders.jpg"></team>
+	<team teamid="new_york_rangers" name="New York Rangers" logo="http://www5.hockeystreams.com/images/artwork/Rangers.jpg"></team>
+	<team teamid="ottawa_senators" name="Ottawa Senators" logo="http://www5.hockeystreams.com/images/artwork/Ottawa.jpg"></team>
+	<team teamid="philadelphia_flyers" name="Philadelphia Flyers" logo="http://www5.hockeystreams.com/images/artwork/Philadelphia.jpg"></team>
+	<team teamid="phoenix_coyotes" name="Phoenix Coyotes" logo="http://www5.hockeystreams.com/images/artwork/Phoenix.jpg"></team>
+	<team teamid="pittsburgh_penguins" name="Pittsburgh Penguins" logo="http://www5.hockeystreams.com/images/artwork/Pitt.jpg"></team>
+	<team teamid="san_jose_sharks" name="San Jose Sharks" logo="http://www5.hockeystreams.com/images/artwork/San_Jose.jpg"></team>
+	<team teamid="st_louis_blues" name="St Louis Blues" logo="http://www5.hockeystreams.com/images/artwork/St-Louis.jpg"></team>
+	<team teamid="tampa_bay_lightning" name="Tampa Bay Lightning" logo="http://www5.hockeystreams.com/images/artwork/Tampa_Bay.jpg"></team>
+	<team teamid="toronto_maple_leafs" name="Toronto Maple Leafs" logo="http://www5.hockeystreams.com/images/artwork/Toronto.jpg"></team>
+	<team teamid="vancouver_canucks" name="Vancouver Canucks" logo="http://www5.hockeystreams.com/images/artwork/Vancouver.jpg"></team>
+	<team teamid="washington_capitals" name="Washington Capitals" logo="http://www5.hockeystreams.com/images/artwork/Washington.jpg"></team>
+	<team teamid="winnipeg_jets" name="Winnipeg Jets" logo="http://www5.hockeystreams.com/images/artwork/Winnipeg.jpg"></team>
+</teams>

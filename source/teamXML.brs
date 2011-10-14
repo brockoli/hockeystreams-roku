@@ -1,7 +1,8 @@
 Function InitTeamListConnection() As Object
 
     conn = CreateObject("roAssociativeArray")
-    conn.UrlShowFeed  = "http://www5.hockeystreams.com/rss/roku_teams.xml" 
+    'conn.UrlShowFeed  = "http://www5.hockeystreams.com/rss/roku_teams.xml" 
+    conn.UrlShowFeed  = "http://brockoli.dyndns.org/moe/roku_teams.xml" 
 
     conn.Timer = CreateObject("roTimespan")
 
@@ -30,6 +31,8 @@ Function init_team_item() As Object
 
     o.Title            = ""
     o.Logo             = ""
+    o.TeamId           = ""
+    o.SubCat           = 3
     
     return o
 End Function
@@ -74,6 +77,7 @@ Function parse_team_xml(xml As Object, teamsArray As Object) As Void
         'fetch all values from the xml for the current show
         item.Title            = validstr(team@name) 
         item.Logo             = validstr(team@logo)
+        item.TeamId           = validstr(team@teamid)
 
         'map xml attributes into screen specific variables
         item.ShortDescriptionLine1 = item.Title 
