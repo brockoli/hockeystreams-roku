@@ -1,8 +1,8 @@
 Function InitTeamListConnection() As Object
 
     conn = CreateObject("roAssociativeArray")
-    'conn.UrlShowFeed  = "http://www5.hockeystreams.com/rss/roku_teams.xml" 
-    conn.UrlShowFeed  = "http://brockoli.dyndns.org/moe/roku_teams.xml" 
+    conn.UrlShowFeed  = "http://www5.hockeystreams.com/rss/roku_teams.xml" 
+    'conn.UrlShowFeed  = "http://brockoli.dyndns.org/moe/roku_teams.xml" 
 
     conn.Timer = CreateObject("roTimespan")
 
