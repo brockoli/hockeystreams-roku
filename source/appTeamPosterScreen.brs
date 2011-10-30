@@ -44,19 +44,8 @@ Function showTeamPosterScreen(screen As Object) As Integer
     while true
         msg = wait(0, screen.GetMessagePort())
         if type(msg) = "roPosterScreenEvent" then
-            print "showPosterScreen | msg = "; msg.GetMessage() " | index = "; msg.GetIndex()
-            if msg.isListFocused() then
-                m.curShow = 0
-                screen.SetFocusedListItem(m.curShow)
-                if msg.GetIndex() = 0 then
-                  screen.SetContentList(getShowsForLive())
-                else if msg.GetIndex() = 1 then
-                  screen.SetContentList(getVodCategories())
-                else if msg.GetIndex() = 2 then
-                  screen.SetContentList(getShowsForLive())
-                end if
-                print "list focused | current category = "; m.curCategory
-            else if msg.isListItemSelected() then
+            print "showTeamPosterScreen | msg = "; msg.GetMessage() " | index = "; msg.GetIndex()
+            if msg.isListItemSelected() then
                 m.curShow = msg.GetIndex()
                 print "list item selected | current show = "; m.curShow
                 if teams[m.curShow].SubCat = 3 then

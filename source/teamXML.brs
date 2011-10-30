@@ -79,8 +79,14 @@ Function parse_team_xml(xml As Object, teamsArray As Object) As Void
         item.Logo             = validstr(team@logo)
         item.TeamId           = validstr(team@teamid)
 
+'        teamLogo = CreateObject("roUrlTransfer")
+'        teamLogo.setUrl(item.Logo)
+'        teamLogo.getToFile("pkg:/images/" + item.TeamId + ".jpg")
+        
         'map xml attributes into screen specific variables
         item.ShortDescriptionLine1 = item.Title 
+'        item.SDPosterURL = "pkg:/artwork/" + item.TeamId + ".jpg"
+'        item.HDPosterURL = "pkg:/artwork/" + item.TeamId + ".jpg"
         item.SDPosterURL = item.Logo
         item.HDPosterURL = item.Logo
         print item.SDPosterURL
