@@ -38,7 +38,6 @@ Function showTeamGamesScreen(screen As Object, teamid As String) As Integer
     m.curShow     = 0
     
     shows = getGamesByTeam(teamid)
-    screen.SetListNames(getCategoryList())
     screen.SetContentList(shows)
     screen.Show()
 

@@ -87,8 +87,8 @@ Function parse_team_xml(xml As Object, teamsArray As Object) As Void
         item.ShortDescriptionLine1 = item.Title 
 '        item.SDPosterURL = "pkg:/artwork/" + item.TeamId + ".jpg"
 '        item.HDPosterURL = "pkg:/artwork/" + item.TeamId + ".jpg"
-        item.SDPosterURL = item.Logo
-        item.HDPosterURL = item.Logo
+        item.SDPosterURL = item.Logo + "?a=1"
+        item.HDPosterURL = item.Logo + "?a=1"
         print item.SDPosterURL
         print item.HDPosterURL
                 
