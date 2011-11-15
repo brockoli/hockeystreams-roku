@@ -56,7 +56,7 @@ Function init_gamesByTeam_item() As Object
     o.Description      = ""
     o.StreamFormat     = "hls"
     'o.StreamQualities  = CreateObject("roArray", 5, true)
-    o.StreamQualities  = ["HD"] 
+    o.StreamQualities  = ["SD"] 
     'o.StreamBitrates   = CreateObject("roArray", 5, true)
     o.StreamBitrates   = [0]
     o.StreamUrls       = CreateObject("roArray", 1, true)
